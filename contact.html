@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact-us - Pari Interiors</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+      /* contact us section */
+      * {
+  box-sizing: border-box;
+}
+.column{
+    height: 530px;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  height: auto;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+        /* Location Section */
+.location {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.location h2 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+.map-container {
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 500[x];
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .map-container iframe {
+      height: auto;
+  }
+}
+        .heading{
+          padding-top: 130px;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          font-size: 70px;
+        }
+        /*footer section*/
+        footer {
+  justify-content: center;
+  align-items: center;
+  display:flexbox;
+  text-align: center;
+  padding: 0;
+  background-color: rgb(40, 43, 44);
+  color: white;
+  height: 150px;
+
+}
+.footer-text{
+  padding-bottom: auto;
+  justify-content: space-between;
+  margin: auto;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="pari logo.png" alt="Company Logo" />
+        <p class="logo-text">Pari Interior</p>
+      </div>
+      <button class="menu-toggle">☰</button>
+      <ul>
+        <li><a class="item-link" href="index.html">HOME</a></li>
+          <li><a class="item-link" href="about.html">ABOUT US </a></li>
+          <li><a class="item-link" href="Product.html">OUR PRODUCTS</a></li>
+          <li><a class="item-link" href="gallery.html">GALLERY</a></li>
+          <li><a class="item-link" href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- About  Heading Section -->
+   <div>
+    <h1 class="heading">CONTECT-US</h1>
+   </h1></div>
+<!--contact us section-->
+</div>
+<div class="row">
+  <div class="column">
+    <img src="https://media.designcafe.com/wp-content/uploads/2024/09/29213417/types-of-curtains.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <form action="/action_page.php">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+      <label for="number">Phone No</label>
+      <input type="text" id="number" name="number" placeholder="Your number..">
+      <label for="name">Email</label>
+      <input type="text" id="email" name="email" placeholder="Your email..">
+      <label for="subject">Subject</label>
+      <textarea id="enquiry" name="enquiry" placeholder="Write something.." style="height:170px"></textarea>
+      <button onclick="sendMail()">Submit</button>
+    </form>
+  </div>
+  <!--enquairy -->
+  
+
+<script>
+  function sendMail() {
+    let enquiry = document.getElementById("enquiry").value;
+    let email = "your_email@example.com"; // Replace with your email
+    let subject = "New Enquiry Submitted";
+    let body = "User's last enquiry: " + enquiry;
+    
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+  }
+</script>
+
+
+
+   <!-- Location Section -->
+<section id="location" class="location">
+    <h2 class="footer-text">Find Us Here</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4146.96050727068!2d77.41765194656253!3d28.670411989374273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf0494c647395%3A0x50b8fdad76f24dc2!2s20%2C%20Pocket%20D%2C%20Patel%20Nagar%202nd%2C%20Patel%20Nagar%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201001!5e0!3m2!1sen!2sin!4v1741764302308!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+        </iframe>
+    </div>
+</section>
+
+  
+  
+  <!-- Footer -->
+  <footer>
+    <ul type="none">
+        <p>PARI INTERIOR AND ALL TYPE OF CURTAINS</p>
+        <li><a href="phone number"class="btn">Phone Number:7589987452</a></li>
+        <li><a href="Email id" class="btn">Email Id:pariinterior@gmail.com</a></li>
+    </ul>
+        
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
